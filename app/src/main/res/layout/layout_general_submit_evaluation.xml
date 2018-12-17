@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/layout_title_bar"
+    android:id="@+id/layout_submit_evaluation"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/merchant_img"
+            android:layout_width="@dimen/dp60"
+            android:layout_height="@dimen/dp60"
+            android:layout_margin="@dimen/dp15"
+            android:background="@drawable/placeholder" />
+
+        <TextView
+            android:id="@+id/merchant_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/merchant_img"
+            android:lineSpacingExtra="@dimen/dp5"
+            android:text="商家店铺名称"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp14" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:lineSpacingExtra="@dimen/dp5"
+            android:text="@string/service_experience"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp13" />
+
+        <com.example.administrator.friendshape.ui.view.ShinyView
+            android:id="@+id/shiny_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_name"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp70"
+            android:layout_marginTop="@dimen/dp8"
+            ratingbar:starCount="5"
+            ratingbar:starDistance="@dimen/dp5"
+            ratingbar:starEmpty="@drawable/shiny_off_icon"
+            ratingbar:starFill="@drawable/shiny_icon"
+            ratingbar:starSize="@dimen/dp20" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/action_feeling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp15"
+        android:background="@drawable/corners_solid_text_black_overlay"
+        android:gravity="left"
+        android:hint="@string/action_feeling"
+        android:lineSpacingExtra="@dimen/dp5"
+        android:minHeight="@dimen/dp150"
+        android:padding="@dimen/dp10"
+        android:textColor="@color/black_overlay"
+        android:textColorHint="@color/gray_light_text"
+        android:textSize="@dimen/dp13" />
+
+
+</LinearLayout>

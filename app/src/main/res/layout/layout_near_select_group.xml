@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/group_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1">
+
+            <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+                android:id="@+id/dynamic_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/dp5"
+                android:drawableRight="@drawable/down_icon"
+                android:text="@string/dynamic"
+                android:textColor="@color/blue_bar"
+                android:textSize="@dimen/dp14" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1">
+
+            <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+                android:id="@+id/people_nearby_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/dp5"
+                android:drawableRight="@drawable/down_white"
+                android:text="@string/people_nearby"
+                android:textColor="@color/black_overlay"
+                android:textSize="@dimen/dp14" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1">
+
+            <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+                android:id="@+id/group_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/dp5"
+                android:drawableRight="@drawable/down_white"
+                android:text="@string/group"
+                android:textColor="@color/black_overlay"
+                android:textSize="@dimen/dp14" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_group_title"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/group_title_layout"
+        android:background="@color/gray_light" />
+
+    <RelativeLayout
+        android:id="@+id/screening_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line_group_title"
+        android:background="@color/translucent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp100" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_group"
+                android:layout_width="@dimen/dp120"
+                android:layout_height="@dimen/dp100"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

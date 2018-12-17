@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.administrator.friendshape">
+
+    <!--允许程序打开网络套接字-->
+    <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION"
+        android:maxSdkVersion="22" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--允许程序设置内置sd卡的写权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--允许程序获取网络状态-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--允许程序访问WiFi网络信息-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--允许程序读写手机状态和身份-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+
+    <application
+        android:name=".global.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:theme="@style/MainTheme">
+
+        </activity>
+
+        <activity
+            android:name=".ui.activity.WelcomeActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/MainTheme" />
+
+        <activity
+            android:name=".ui.activity.HomeActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/MainTheme"
+            android:windowSoftInputMode="adjustResize|adjustUnspecified|stateHidden">
+
+        </activity>
+
+        <activity
+            android:name=".ui.activity.component.CityScreeningActivity"
+            android:theme="@style/MainTheme" />
+
+        <activity
+            android:name=".ui.activity.component.PersonalActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/MainTheme" />
+
+        <activity
+            android:name=".ui.activity.component.MyDynamicActivity"
+            android:theme="@style/MainTheme" />
+
+        <activity
+            android:name=".ui.activity.component.GeneralActivity"
+            android:theme="@style/MainTheme" />
+
+        <activity
+            android:name=".ui.activity.component.ReleaseNewDynamicActivity"
+            android:theme="@style/MainTheme" />
+
+        <activity
+            android:name=".ui.activity.component.MerchantsTypeFormActivity"
+            android:theme="@style/MainTheme" />
+
+        <activity
+            android:name=".ui.activity.component.MerchantsContentActivity"
+            android:theme="@style/MainTheme" />
+
+        <activity
+            android:name=".ui.activity.component.ATeamActivity"
+            android:theme="@style/MainTheme" />
+
+        <activity
+            android:name=".ui.activity.component.OrderContentActivity"
+            android:theme="@style/MainTheme" />
+
+        <activity
+            android:name=".ui.activity.component.InviteFriendsActivity"
+            android:theme="@style/MainTheme" />
+
+        <activity
+            android:name=".ui.activity.component.CancleOrderActivity"
+            android:theme="@style/MainTheme" />
+
+        <activity
+            android:name=".ui.activity.component.TheDetailsInformationActivity"
+            android:theme="@style/MainTheme"
+            android:windowSoftInputMode="adjustResize|adjustUnspecified|stateHidden" />
+
+        <activity
+            android:name=".ui.activity.component.MerchantsGroupsActivity"
+            android:theme="@style/MainTheme" />
+
+        <activity
+            android:name=".ui.activity.component.EnterTheTuxedoActivity"
+            android:theme="@style/MainTheme" />
+
+        <activity
+            android:name=".ui.activity.component.FriendsControllerActivity"
+            android:theme="@style/MainTheme" />
+
+        <activity
+            android:name=".ui.activity.component.BindPhoneActivity"
+            android:theme="@style/MainTheme" />
+
+        <activity
+            android:name=".ui.activity.component.ImMessageActivity"
+            android:theme="@style/MainTheme" />
+
+        <service android:name=".server.InitializeService" />
+        <service android:name=".server.ListenNetworkStateService" />
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1107986978" />  <!--需要修改APPkey-->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+    </application>
+
+</manifest>

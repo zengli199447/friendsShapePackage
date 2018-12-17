@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_friends_confirm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="@dimen/dp30"
+        android:orientation="horizontal">
+
+
+        <com.example.administrator.friendshape.ui.view.CircleImageView
+            android:id="@+id/user_img"
+            android:layout_width="@dimen/dp60"
+            android:layout_height="@dimen/dp60"
+            android:src="@drawable/placeholder"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_img"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/dp20"
+            android:text="内容区"
+            android:textColor="@color/black_overlay"
+            android:textSize="14dp" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="@color/gray_light" />
+
+    <LinearLayout
+        android:id="@+id/contorller_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp30"
+        android:layout_marginBottom="@dimen/dp30"
+        android:layout_marginTop="@dimen/dp10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_cancle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp40"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_weight="1"
+            android:background="@drawable/corners_solid_text_gray"
+            android:gravity="center"
+            android:text="@string/refused_to"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp14" />
+
+
+        <TextView
+            android:id="@+id/btn_commit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp40"
+            android:layout_weight="1"
+            android:background="@drawable/corners_the_gradient_bg"
+            android:gravity="center"
+            android:text="@string/agree_to_add"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp14" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

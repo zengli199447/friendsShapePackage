@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/user_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/user_title_bg"
+        android:minHeight="@dimen/dp90">
+
+        <RelativeLayout
+            android:id="@+id/user_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp15">
+
+            <ImageView
+                android:id="@+id/user_photo"
+                android:layout_width="@dimen/dp60"
+                android:layout_height="@dimen/dp60"
+                android:background="@drawable/placeholder"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/user_neck_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_toRightOf="@+id/user_photo"
+                android:text="用户昵称" />
+
+            <TextView
+                android:id="@+id/user_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_neck_name"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_toRightOf="@+id/user_photo"
+                android:text="ID : 123456"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp13" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/the_signature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_layout"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp95"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:lineSpacingExtra="@dimen/dp5"
+            android:text="个性签名 : "
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp13" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp10"
+        android:background="@color/gray_light" />
+
+    <RelativeLayout
+        android:id="@+id/my_dynamic_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:background="@color/white">
+
+        <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp15"
+            android:drawableLeft="@drawable/my_dynamic_icon"
+            android:drawablePadding="@dimen/dp15"
+            android:text="@string/my_dynamic"
+            android:textColor="@color/black_overlay"
+            android:textSize="@dimen/dp14" />
+
+        <ImageView
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp5"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/right_icon" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_light" />
+
+
+    <RelativeLayout
+        android:id="@+id/service_phone_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:background="@color/white">
+
+        <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp15"
+            android:drawableLeft="@drawable/service_phone_icon"
+            android:drawablePadding="@dimen/dp15"
+            android:text="@string/service_phone"
+            android:textColor="@color/black_overlay"
+            android:textSize="@dimen/dp14" />
+
+        <ImageView
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp5"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/right_icon" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_light" />
+
+    <RelativeLayout
+        android:id="@+id/modify_passwaor_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:background="@color/white">
+
+        <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp15"
+            android:drawableLeft="@drawable/the_lock_blue_icon"
+            android:drawablePadding="@dimen/dp15"
+            android:text="@string/modify_passwaor"
+            android:textColor="@color/black_overlay"
+            android:textSize="@dimen/dp14" />
+
+        <ImageView
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp5"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/right_icon" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_light" />
+
+    <RelativeLayout
+        android:id="@+id/about_me_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:background="@color/white">
+
+        <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp15"
+            android:drawableLeft="@drawable/about_me_icon"
+            android:drawablePadding="@dimen/dp15"
+            android:text="@string/about_me"
+            android:textColor="@color/black_overlay"
+            android:textSize="@dimen/dp14" />
+
+        <ImageView
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp5"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/right_icon" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_light" />
+
+
+    <RelativeLayout
+        android:id="@+id/help_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:background="@color/white">
+
+        <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp15"
+            android:drawableLeft="@drawable/help_icon"
+            android:drawablePadding="@dimen/dp15"
+            android:text="@string/help"
+            android:textColor="@color/black_overlay"
+            android:textSize="@dimen/dp14" />
+
+        <ImageView
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp5"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/right_icon" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_light" />
+
+
+</LinearLayout>

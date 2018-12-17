@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_friends_to_apply_for"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.example.administrator.friendshape.ui.view.CircleImageView
+            android:id="@+id/merchant_img"
+            android:layout_width="@dimen/dp60"
+            android:layout_height="@dimen/dp60"
+            android:src="@drawable/placeholder"
+            android:layout_margin="@dimen/dp15" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/merchant_img"
+            android:lineSpacingExtra="@dimen/dp5"
+            android:text="用户昵称"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp14" />
+
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/action_feeling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:background="@drawable/corners_solid_text_black_overlay"
+        android:gravity="left"
+        android:hint="@string/add_friend_validation"
+        android:lineSpacingExtra="@dimen/dp5"
+        android:minHeight="@dimen/dp150"
+        android:padding="@dimen/dp10"
+        android:textColor="@color/black_overlay"
+        android:textColorHint="@color/gray_light_text"
+        android:textSize="@dimen/dp13" />
+
+
+
+
+</LinearLayout>

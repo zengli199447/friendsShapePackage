@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_title_bar">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="com.example.administrator.friendshape.widget.FlingBehavior"
+            app:elevation="0dp">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleMarginEnd="64dp"
+                app:expandedTitleMarginStart="48dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/user_title_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:minHeight="@dimen/dp90">
+
+                        <RelativeLayout
+                            android:id="@+id/user_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp15"
+                            android:layout_marginTop="@dimen/dp15">
+
+                            <ImageView
+                                android:id="@+id/user_photo"
+                                android:layout_width="@dimen/dp60"
+                                android:layout_height="@dimen/dp60"
+                                android:background="@drawable/placeholder"
+                                android:scaleType="centerCrop" />
+
+                            <TextView
+                                android:id="@+id/user_neck_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp20"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:layout_toRightOf="@+id/user_photo"
+                                android:textSize="@dimen/dp14"
+                                android:textColor="@color/black"
+                                android:text="用户昵称" />
+
+                            <TextView
+                                android:id="@+id/user_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/user_neck_name"
+                                android:layout_marginLeft="@dimen/dp20"
+                                android:layout_marginTop="@dimen/dp10"
+                                android:layout_toRightOf="@+id/user_photo"
+                                android:text="ID : 123456"
+                                android:textColor="@color/gray_light_text"
+                                android:textSize="@dimen/dp13" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/the_signature"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/user_layout"
+                            android:layout_marginBottom="@dimen/dp10"
+                            android:layout_marginLeft="@dimen/dp95"
+                            android:layout_marginRight="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:lineSpacingExtra="@dimen/dp5"
+                            android:text="个性签名 : "
+                            android:textColor="@color/gray_light_text"
+                            android:textSize="@dimen/dp13" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp10"
+                        android:background="@color/gray_" />
+
+                </LinearLayout>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/dp50"
+                android:layout_marginRight="@dimen/dp50"
+                app:tabBackground="@drawable/corners_table_layout"
+                app:tabIndicatorColor="@color/blue_bar"
+                app:tabIndicatorHeight="2dp"
+                app:tabSelectedTextColor="@color/blue_bar"
+                app:tabTextAppearance="@style/TaskTabPageIndicator.Text"
+                app:layout_collapseMode="pin"
+                app:tabTextColor="@color/black_overlay" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_light" />
+
+        </android.support.design.widget.AppBarLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/controller_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/add_friend"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp10"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/corners_solid_text_black_overlay"
+                android:text="@string/add_friend"
+                android:textColor="@color/black_overlay"
+                android:textSize="@dimen/dp13" />
+
+            <TextView
+                android:id="@+id/say_hello"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp10"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/say_hello"
+                android:background="@drawable/corners_the_gradient_bg"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp13" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_light" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/dp20"
+        android:gravity="center_vertical"
+        android:text="定位城市"
+        android:textColor="@color/black_overlay"
+        android:textSize="@dimen/dp14" />
+
+    <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+        android:id="@+id/current_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp10"
+        android:drawableLeft="@drawable/location_gray_icon"
+        android:gravity="center"
+        android:text=""
+        android:textStyle="bold"
+        android:drawablePadding="@dimen/dp5"
+        android:textSize="@dimen/dp13"
+        android:textColor="@color/black_overlay" />
+
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginBottom="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp40"
+        android:background="@color/gray_" />
+
+    <LinearLayout
+        android:id="@+id/hot_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="@dimen/dp20"
+        android:paddingRight="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="热门城市"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp14" />
+
+        <com.example.administrator.friendshape.ui.view.IsometricGridView
+            android:id="@+id/item_header_city_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="@dimen/dp10"
+            android:columnWidth="60dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:horizontalSpacing="15dp"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp40"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/gray_" />
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="@dimen/dp20"
+        android:gravity="center_vertical"
+        android:text="所有城市"
+        android:textColor="@color/black_overlay"
+        android:textSize="@dimen/dp14" />
+</LinearLayout>

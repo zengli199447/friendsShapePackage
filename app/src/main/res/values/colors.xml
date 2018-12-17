@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="blue">#6aacff</color>
+    <color name="blue_">#445aea</color>
+    <color name="gray">#ff939393</color>
+    <color name="gray_light">#ffe3e2e2</color>
+    <color name="card_shadow">#ffd4d4d4</color>
+    <color name="black_overlay">#666666</color>
+    <color name="white_overlay">#40ffffff</color>
+    <color name="motion_red">#ffe64a46</color>
+    <color name="motion_blue">#6aacff</color>
+    <color name="fatigue_green">#6aacff</color>
+    <color name="fatigue_yellow">#aad952</color>
+    <color name="fatigue_orange">#fff9db3b</color>
+    <color name="fatigue_orange_2">#fffeaf30</color>
+    <color name="fatigue_red">#fb5223</color>
+    <color name="fatigue_red_center">#f76b45</color>
+    <color name="fatigue_red_end">#f58264</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray_">#f6f6f6</color>
+    <drawable name="transparent">#00000000</drawable>
+    <color name="blue_center">#3E6EE6</color>
+    <color name="blue_min">#69ABFF</color>
+    <color name="black_center">#363D47</color>
+    <color name="orange_red">#FB5223</color>
+    <color name="black_">#333333</color>
+    <color name="blue_bar">#45Aeff</color>
+    <color name="gray_light_text">#b7b7b7</color>
+    <color name="blue_bar_pay">#67b8f2</color>
+    <drawable name="white_">#ffffffff</drawable>
+    <color name="orange_text">#ef8200</color>
+    <color name="red_text">#cc3333</color>
+
+    <color name="progress_bg">#BAE1F1</color>
+
+    <color name="blue_the_gradient_f">#1c9af9</color>
+    <color name="blue_the_gradient_c">#21acfc</color>
+    <color name="blue_the_gradient_l">#26bcff</color>
+
+    <color name="translucent">#39080808</color>
+
+</resources>

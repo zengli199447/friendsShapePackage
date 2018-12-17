@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp80">
+
+        <com.example.administrator.friendshape.ui.view.CircleImageView
+            android:id="@+id/user_img"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:layout_centerVertical="true"
+            android:src="@drawable/placeholder" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toRightOf="@+id/user_img"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户名称"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dp14" />
+
+            <com.example.administrator.friendshape.ui.view.ShinyView
+                android:id="@+id/shiny_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/merchants_name"
+                android:layout_marginTop="@dimen/dp5"
+                ratingbar:starCount="5"
+                ratingbar:starDistance="@dimen/dp5"
+                ratingbar:starEmpty="@drawable/shiny_off_icon"
+                ratingbar:starFill="@drawable/shiny_icon"
+                ratingbar:starSize="@dimen/dp15" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/creat_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+           android:layout_marginTop="@dimen/dp20"
+            android:text="2018-08-20"
+            android:textColor="@color/gray_light_text"
+            android:textSize="@dimen/dp12" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:minHeight="@dimen/dp40"
+        android:id="@+id/conmments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="@dimen/dp5"
+        android:text="评论内容"
+        android:layout_marginBottom="@dimen/dp10"
+        android:textColor="@color/black_overlay"
+        android:textSize="@dimen/dp13" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_light" />
+
+
+</LinearLayout>

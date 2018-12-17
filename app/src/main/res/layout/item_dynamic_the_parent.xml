@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50">
+
+            <com.example.administrator.friendshape.ui.view.CircleImageView
+                android:id="@+id/user_img"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:layout_centerVertical="true"
+                android:src="@drawable/placeholder" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_toRightOf="@+id/user_img"
+                android:text="用户昵称"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dp14" />
+
+            <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+                android:id="@+id/distance"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/location_gray_icon"
+                android:drawablePadding="@dimen/dp5"
+                android:text="5.9km"
+                android:textColor="@color/gray_light_text"
+                android:textSize="@dimen/dp13" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/dynamic_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp5"
+            android:lineSpacingExtra="@dimen/dp5"
+            android:minHeight="@dimen/dp20"
+            android:text="动态内容"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp13" />
+
+        <RelativeLayout
+            android:id="@+id/recycler_view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-5dp"
+            android:layout_marginRight="-5dp"
+            android:layout_marginTop="@dimen/dp10"
+            android:visibility="gone">
+
+            <com.example.administrator.friendshape.ui.view.GridRecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40">
+
+            <TextView
+                android:id="@+id/creat_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="2018-08-20"
+                android:textColor="@color/gray_light_text"
+                android:textSize="@dimen/dp12" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/support_check"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp20"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:button="@drawable/check_support_select"
+                android:gravity="center"
+                android:textColor="@color/gray_light_text"
+                android:drawablePadding="@dimen/dp5"
+                android:text=" 999+"
+                android:textSize="@dimen/dp13" />
+
+            <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+                android:id="@+id/comments"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp15"
+                android:layout_toLeftOf="@+id/support_check"
+                android:drawableLeft="@drawable/comments_icon"
+                android:drawablePadding="@dimen/dp5"
+                android:gravity="center_vertical"
+                android:text="999+"
+                android:textColor="@color/gray_light_text"
+                android:textSize="@dimen/dp13" />
+
+            <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+                android:id="@+id/code_violation"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_toLeftOf="@+id/comments"
+                android:drawableLeft="@drawable/code_violation_icon"
+                android:drawablePadding="@dimen/dp5"
+                android:gravity="center_vertical"
+                android:text="    "
+                android:textColor="@color/gray_light_text"
+                android:textSize="@dimen/dp13" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp10"
+        android:background="@color/gray_" />
+
+</LinearLayout>

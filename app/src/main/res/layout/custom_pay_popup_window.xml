@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:gravity="center"
+            android:text="@string/select_payment_method"
+            android:textColor="@color/black_overlay"
+            android:textSize="@dimen/dp14" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/gray_light" />
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/wechat_pay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp30"
+            android:layout_marginTop="@dimen/dp20"
+            android:background="@color/transparent"
+            android:button="@drawable/wechat_pay_icon"
+            android:gravity="center_vertical"
+            android:text="        微信支付"
+            android:textColor="@drawable/text_color_selector"
+            android:textSize="@dimen/dp14" />
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/zhifubao_pay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp30"
+            android:background="@color/transparent"
+            android:button="@drawable/zhifubao_pay_icon"
+            android:gravity="center_vertical"
+            android:text="        支付宝支付"
+            android:textColor="@drawable/text_color_selector"
+            android:textSize="@dimen/dp14" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/gray_light" />
+
+        <TextView
+            android:id="@+id/confirm"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/dp20"
+            android:layout_marginLeft="@dimen/dp50"
+            android:layout_marginRight="@dimen/dp50"
+            android:layout_marginTop="@dimen/dp20"
+            android:background="@drawable/corners_soild_layout_blue"
+            android:gravity="center"
+            android:text="@string/confirm_pay"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp14" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

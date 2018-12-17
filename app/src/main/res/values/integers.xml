@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="min">10</integer>
+    <integer name="max">120</integer>
+
+    <integer name="validation_interval">60</integer>
+    <integer name="the_transition">1500</integer>
+    <integer name="map_margin">100</integer>
+
+    <!--启动页滞留时间-->
+    <integer name="send_message_action_ss">1500</integer>
+    <!--刷新滞留时间(模拟)-->
+    <integer name="refresh_simulation">1500</integer>
+    <!--刷新提示滞留时间(模拟)-->
+    <integer name="refresh_prompt_simulation">2500</integer>
+    <!--音乐控制器删除滞留时间(模拟)-->
+    <integer name="gone_prompt_simulation">800</integer>
+    <!--白天 - 晚上 standard-->
+    <integer name="sun_max_standard">19</integer>
+    <integer name="sun_min_standard">7</integer>
+    <!--最大选择年限-->
+    <integer name="max_select_to_year">30</integer>
+    <integer name="max_select_form_year">-15</integer>
+    <integer name="x_max_select_to_year">100</integer>
+
+    <integer name="screen_height">200</integer>
+    <integer name="music_layout_height">60</integer>
+
+    <integer name="anim_duration_medium">300</integer>
+    <integer name="anim_duration_long">400</integer>
+
+    <integer name="title_bar_margin">25</integer>
+    <integer name="order_title_bar_margin">10</integer>
+    <integer name="details_bar_margin">40</integer>
+    <integer name="chat_bar_margin">60</integer>
+
+    <!--搜索记录最多显示多少条 (期望条数 - 1)-->
+    <integer name="search_history_log">6</integer>
+
+    <integer name="the_minimum_amount">0</integer>
+
+    <integer name="timing_interval">999</integer>
+
+</resources>

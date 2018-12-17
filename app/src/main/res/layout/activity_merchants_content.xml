@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_title_bar" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:background="@drawable/placeholder"
+                    android:visibility="gone"
+                    android:id="@+id/merchants_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp150"
+                    android:scaleType="centerCrop" />
+
+                <com.example.administrator.friendshape.ui.view.ImageSlideshow
+                    android:id="@+id/banner_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp150" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp15"
+                    android:layout_marginRight="@dimen/dp15"
+                    android:layout_marginTop="@dimen/dp15">
+
+                    <TextView
+                        android:id="@+id/merchants_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp20"
+                        android:gravity="center_vertical"
+                        android:text="商户名称"
+                        android:textColor="@color/black_overlay"
+                        android:textSize="@dimen/dp14" />
+
+                    <com.example.administrator.friendshape.ui.view.ShinyView
+                        android:id="@+id/shiny_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/merchants_name"
+                        android:layout_marginTop="@dimen/dp10"
+                        ratingbar:starCount="5"
+                        ratingbar:starDistance="@dimen/dp5"
+                        ratingbar:starEmpty="@drawable/shiny_off_icon"
+                        ratingbar:starFill="@drawable/shiny_icon"
+                        ratingbar:starSize="@dimen/dp15" />
+
+
+                    <TextView
+                        android:id="@+id/consumption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp15"
+                        android:layout_below="@+id/merchants_name"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_toRightOf="@+id/shiny_view"
+                        android:gravity="center_vertical"
+                        android:text="人均 : ￥ "
+                        android:textColor="@color/black_overlay"
+                        android:textSize="@dimen/dp13" />
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/consumption"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:background="@color/gray_light" />
+
+                    <RelativeLayout
+                        android:id="@+id/merchants_location_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line"
+                        android:layout_marginTop="@dimen/dp15">
+
+                        <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:drawableLeft="@drawable/location_gray_icon"
+                            android:gravity="center_vertical" />
+
+                        <TextView
+                            android:id="@+id/merchants_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp20"
+                            android:layout_marginRight="@dimen/dp80"
+                            android:lineSpacingExtra="@dimen/dp5"
+                            android:text=""
+                            android:textColor="@color/black_overlay"
+                            android:textSize="@dimen/dp13" />
+
+                        <ImageView
+                            android:id="@+id/phone_img"
+                            android:layout_width="@dimen/dp30"
+                            android:layout_height="@dimen/dp30"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dp15"
+                            android:padding="@dimen/dp5"
+                            android:src="@drawable/phone_icon" />
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="@dimen/dp40"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dp15"
+                            android:layout_toLeftOf="@+id/phone_img"
+                            android:background="@color/gray_light" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/line_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/merchants_location_layout"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:background="@color/gray_light" />
+
+                    <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+                        android:id="@+id/merchants_business_hours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line_location"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/dp15"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:drawableLeft="@drawable/merchants_business_hours_icon"
+                        android:drawablePadding="@dimen/dp15"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/black_overlay"
+                        android:textSize="@dimen/dp13" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/gray_" />
+
+                <include layout="@layout/layout_in_the_group" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/gray_" />
+
+                <include layout="@layout/layout_merchants_service" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/gray_" />
+
+                <include layout="@layout/layout_user_evaluation" />
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_light" />
+
+
+        <TextView
+            android:id="@+id/initiate_group"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/blue_bar"
+            android:gravity="center"
+            android:text="@string/initiate_group"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

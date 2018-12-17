@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:minHeight="@dimen/dp50">
+
+        <TextView
+            android:id="@+id/user_neck_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:gravity="center"
+            android:text="评论内容"
+            android:textColor="@color/blue_bar"
+            android:textSize="@dimen/dp13"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_toRightOf="@+id/user_neck_name"
+            android:gravity="center"
+            android:text="@string/reply"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp13"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/user_neck_name_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_toRightOf="@+id/reply"
+            android:gravity="center"
+            android:text="评论内容"
+            android:textColor="@color/blue_bar"
+            android:textSize="@dimen/dp13"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_neck_name"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp5"
+            android:gravity="left"
+            android:lineSpacingExtra="@dimen/dp5"
+            android:minHeight="@dimen/dp20"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp13" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:background="@color/gray_light" />
+
+    <RelativeLayout
+        android:id="@+id/placeholder_filling"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp100"
+        android:background="@color/gray_"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:background="@color/gray_"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="80dp"
+                android:layout_weight="1"
+                android:background="@color/gray_light" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="T  H  E       E  N  D"
+                android:textColor="@color/gray_light_text"
+                android:textSize="@dimen/dp10" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="80dp"
+                android:layout_weight="1"
+                android:background="@color/gray_light" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

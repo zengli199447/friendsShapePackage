@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp10"
+        android:background="@color/gray_" />
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginBottom="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp15">
+
+        <com.example.administrator.friendshape.ui.view.CircleImageView
+            android:id="@+id/user_img"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:src="@drawable/placeholder"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/user_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp100"
+            android:layout_toRightOf="@+id/user_img"
+            android:lineSpacingExtra="@dimen/dp5"
+            android:text="用户信息"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp14" />
+
+
+        <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+            android:id="@+id/no_single_boy"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp20"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@+id/group_complete"
+            android:drawableLeft="@drawable/boy_icon"
+            android:drawablePadding="@dimen/dp5"
+            android:gravity="center_vertical"
+            android:text="@string/no_single"
+            android:textColor="@color/black_overlay"
+            android:textSize="@dimen/dp13"
+            android:visibility="gone" />
+
+        <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+            android:id="@+id/no_single_girl"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp20"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/dp5"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/girl_icon"
+            android:drawablePadding="@dimen/dp5"
+            android:gravity="center_vertical"
+            android:text="@string/no_single"
+            android:textColor="@color/black_overlay"
+            android:textSize="@dimen/dp13"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/merchants_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:lineSpacingExtra="@dimen/dp5"
+        android:text="相关信息"
+        android:textColor="@color/black_overlay" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/gray_light" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp10">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp150"
+            android:max="100"
+            android:progress="80"
+            android:progressDrawable="@drawable/corners_bar_bg" />
+
+
+        <TextView
+            android:id="@+id/tuxedo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/corners_the_gradient_bg"
+            android:paddingBottom="@dimen/dp5"
+            android:paddingLeft="@dimen/dp20"
+            android:paddingRight="@dimen/dp20"
+            android:paddingTop="@dimen/dp5"
+            android:text="@string/tuxedo"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp13" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginBottom="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15">
+
+        <TextView
+            android:id="@+id/money_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="@dimen/dp5"
+            android:text="金额"
+            android:textColor="@color/black_overlay"
+            android:textSize="@dimen/dp13" />
+
+
+        <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+            android:id="@+id/chat"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp20"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/group_chat_on_icon"
+            android:drawablePadding="@dimen/dp5"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="@string/in_group_chat"
+            android:textColor="@color/blue_bar"
+            android:textSize="@dimen/dp13" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

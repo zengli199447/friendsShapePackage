@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_dynamic_photo"
+    android:layout_width="match_parent"
+    android:layout_height="115dp"
+    android:scaleType="centerCrop">
+
+    <com.example.administrator.friendshape.ui.view.CustomRoundAngleImageView
+        android:id="@+id/photo_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp5"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/delet_img"
+        android:layout_width="@dimen/dp30"
+        android:layout_height="@dimen/dp30"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="-5dp"
+        android:layout_marginTop="-5dp"
+        android:padding="@dimen/dp5"
+        android:src="@drawable/delet_icon"
+        android:visibility="gone" />
+
+
+</RelativeLayout>
+

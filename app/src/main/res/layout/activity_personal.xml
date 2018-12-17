@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <LinearLayout
+        android:id="@+id/input_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_title_bar"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp70">
+
+            <TextView
+                android:layout_width="@dimen/dp30"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/user_photo"
+                android:textColor="@color/black_overlay"
+                android:textSize="@dimen/dp14" />
+
+            <ImageView
+                android:background="@drawable/placeholder"
+                android:id="@+id/user_photo"
+                android:layout_width="@dimen/dp45"
+                android:layout_height="@dimen/dp45"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_light" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50">
+
+            <TextView
+                android:layout_width="@dimen/dp30"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/nice_name"
+                android:textColor="@color/black_overlay"
+                android:textSize="@dimen/dp14" />
+
+            <EditText
+                android:id="@+id/edit_nick_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp20"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp50"
+                android:background="@color/transparent"
+                android:gravity="right"
+                android:hint="@string/input_nick_name_prompt"
+                android:textColor="@color/gray_light_text"
+                android:textSize="@dimen/dp13" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_light" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50">
+
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/gender"
+                android:textColor="@color/black_overlay"
+                android:textSize="@dimen/dp14" />
+
+            <TextView
+                android:id="@+id/gender_not_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_toRightOf="@+id/gender"
+                android:text="@string/not_change"
+                android:textColor="@color/gray_light"
+                android:textSize="@dimen/dp12" />
+
+            <TextView
+                android:id="@+id/edit_gender"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp20"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp50"
+                android:background="@color/transparent"
+                android:gravity="right"
+                android:hint="@string/select_gender"
+                android:textColor="@color/gray_light_text"
+                android:textSize="@dimen/dp13" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_light" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50">
+
+            <TextView
+                android:layout_width="@dimen/dp30"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/brithday"
+                android:textColor="@color/black_overlay"
+                android:textSize="@dimen/dp14" />
+
+            <TextView
+                android:id="@+id/edit_age"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp20"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp50"
+                android:background="@color/transparent"
+                android:gravity="right"
+                android:hint="@string/select_age"
+                android:textColor="@color/gray_light_text"
+                android:textSize="@dimen/dp13" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_light" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50">
+
+            <TextView
+                android:id="@+id/user_id_prompt"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/id"
+                android:textColor="@color/black_overlay"
+                android:textSize="@dimen/dp14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_toRightOf="@+id/user_id_prompt"
+                android:text="@string/not_change"
+                android:textColor="@color/gray_light"
+                android:textSize="@dimen/dp12" />
+
+            <TextView
+                android:id="@+id/user_id"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp20"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp50"
+                android:background="@color/transparent"
+                android:gravity="right"
+                android:hint=""
+                android:textColor="@color/gray_light_text"
+                android:textSize="@dimen/dp13" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_light" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp15"
+                android:text="@string/the_signature"
+                android:textColor="@color/black_overlay"
+                android:textSize="@dimen/dp14" />
+
+            <EditText
+                android:id="@+id/the_signature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp80"
+                android:layout_marginTop="@dimen/dp15"
+                android:background="@color/transparent"
+                android:gravity="left"
+                android:hint="@string/the_signature_about"
+                android:lineSpacingExtra="@dimen/dp5"
+                android:minHeight="@dimen/dp80"
+                android:paddingBottom="@dimen/dp5"
+                android:paddingLeft="@dimen/dp5"
+                android:paddingRight="@dimen/dp5"
+                android:textColor="@color/gray_light_text"
+                android:textSize="@dimen/dp13" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/input_content"
+        android:background="@color/gray_" />
+
+
+</RelativeLayout>

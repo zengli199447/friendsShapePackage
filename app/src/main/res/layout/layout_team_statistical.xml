@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp15"
+    android:layout_marginRight="@dimen/dp15"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp30"
+        android:layout_marginBottom="@dimen/dp10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/the_activity_time"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp14" />
+
+        <TextView
+            android:id="@+id/the_activity_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp100"
+            android:text=""
+            android:hint="@string/the_activity_start_date"
+            android:textColorHint="@color/gray_light_text"
+            android:textColor="@color/black_overlay"
+            android:textSize="@dimen/dp13" />
+
+        <ImageView
+            android:id="@+id/the_activity_time_select"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/concise_down_icon" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_light" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/as_of_the_date"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp14" />
+
+        <TextView
+            android:id="@+id/as_of_the_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp100"
+            android:text=""
+            android:hint="@string/select_as_of_the_date"
+            android:textColorHint="@color/gray_light_text"
+            android:textColor="@color/black_overlay"
+            android:textSize="@dimen/dp13" />
+
+        <ImageView
+            android:id="@+id/as_of_the_date_select"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/concise_down_icon" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_light" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/the_number_of_groups"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp14" />
+
+        <TextView
+            android:id="@+id/the_number_of_groups"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp100"
+            android:text=""
+            android:textColor="@color/black_overlay"
+            android:textSize="@dimen/dp13" />
+
+        <TextView
+            android:id="@+id/boy_groups"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp120"
+            android:text="男 _ 人"
+            android:textColor="@color/black_overlay" />
+
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/boy_groups_no_single"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/check_tools_save"
+            android:gravity="center"
+            android:text="  是否免单"
+            android:textColor="@color/black"
+            android:textSize="14dp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_light" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50">
+
+        <TextView
+            android:id="@+id/gril_groups"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp120"
+            android:text="女 _ 人"
+            android:textColor="@color/black_overlay" />
+
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/gril_groups_no_single"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/check_tools_save"
+            android:gravity="center"
+            android:text="  是否免单"
+            android:textColor="@color/black"
+            android:textSize="14dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_light" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/group_amount_about"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp14" />
+
+        <com.example.administrator.friendshape.ui.view.ClearEditTextView
+            android:id="@+id/group_amount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp30"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp100"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:inputType="phone"
+            android:text=""
+            android:hint="@string/input_group_amount"
+            android:textColorHint="@color/gray_light_text"
+            android:textColor="@color/black_overlay"
+            android:textSize="@dimen/dp13" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_light" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp15"
+            android:text="@string/activity_needs"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp14" />
+
+        <EditText
+            android:id="@+id/activity_needs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp100"
+            android:layout_marginTop="@dimen/dp15"
+            android:background="@color/transparent"
+            android:gravity="left"
+            android:hint="活动需求备注:"
+            android:lineSpacingExtra="@dimen/dp5"
+            android:minHeight="@dimen/dp80"
+            android:text=""
+            android:textColor="@color/black_overlay"
+            android:textSize="@dimen/dp13" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_light" />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/release_the_dynamic"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp30"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/transparent"
+        android:button="@drawable/check_tools_save"
+        android:gravity="center_vertical"
+        android:text="  同时发布到附近组团动态"
+        android:textColor="@color/gray_light_text"
+        android:textSize="@dimen/dp12" />
+
+
+
+
+</LinearLayout>

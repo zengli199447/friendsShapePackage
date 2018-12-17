@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15">
+
+            <TextView
+                android:layout_width="@dimen/dp80"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/account"
+                android:textColor="@color/black_overlay"
+                android:textSize="@dimen/dp14" />
+
+            <EditText
+                android:id="@+id/edit_you_phone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp80"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:hint="@string/your_phone_number"
+                android:inputType="phone"
+                android:textColor="@color/black_overlay"
+                android:textColorHint="@color/gray_light_text"
+                android:textSize="12dp" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="@dimen/dp30"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp80"
+                android:background="@color/gray_light" />
+
+            <TextView
+                android:id="@+id/to_obtain_code"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:minWidth="@dimen/dp70"
+                android:text="@string/to_obtain_code"
+                android:textColor="@color/blue_bar"
+                android:textSize="@dimen/dp13" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_light" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15">
+
+            <TextView
+                android:layout_width="@dimen/dp80"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/verification_code"
+                android:textColor="@color/black_overlay"
+                android:textSize="@dimen/dp14" />
+
+            <EditText
+                android:id="@+id/edit_verification_code"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp80"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:hint="@string/your_verification_code"
+                android:textColor="@color/black_overlay"
+                android:textColorHint="@color/gray_light_text"
+                android:textSize="12dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_light" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/password_controller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp15">
+
+                <TextView
+                    android:id="@+id/password_type"
+                    android:layout_width="@dimen/dp80"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/pass_word"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="@dimen/dp14" />
+
+                <EditText
+                    android:id="@+id/edit_first_pass_word"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp80"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="@string/your_password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/black_overlay"
+                    android:textColorHint="@color/gray_light_text"
+                    android:textSize="12dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/gray_light" />
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/first_password_check"
+                    android:layout_width="@dimen/dp30"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="-15dp"
+                    android:button="@drawable/check_tools"
+                    android:gravity="center"
+                    android:textSize="0dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp15">
+
+                <TextView
+                    android:id="@+id/password_commite"
+                    android:layout_width="@dimen/dp80"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/commite_password"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="@dimen/dp14" />
+
+                <EditText
+                    android:id="@+id/edit_commite_pass_word"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp80"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="@string/commite_your_password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/black_overlay"
+                    android:textColorHint="@color/gray_light_text"
+                    android:textSize="12dp" />
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/commite_password_check"
+                    android:layout_width="@dimen/dp30"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="-15dp"
+                    android:button="@drawable/check_tools"
+                    android:gravity="center"
+                    android:textSize="0dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/gray_light" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/commite_bind"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_below="@+id/save"
+        android:layout_marginLeft="@dimen/dp60"
+        android:layout_marginRight="@dimen/dp60"
+        android:layout_marginTop="@dimen/dp30"
+        android:background="@drawable/corners_soild_layout_blue"
+        android:gravity="center"
+        android:text="@string/commite_bind"
+        android:textSize="@dimen/dp16" />
+
+
+</LinearLayout>

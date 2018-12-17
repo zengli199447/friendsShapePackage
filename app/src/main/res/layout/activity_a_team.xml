@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_title_bar"
+        android:layout_marginBottom="@dimen/dp50">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/the_contact"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp14" />
+
+                <com.example.administrator.friendshape.ui.view.ClearEditTextView
+                    android:id="@+id/the_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp100"
+                    android:layout_marginRight="@dimen/dp15"
+                    android:background="@color/transparent"
+                    android:minHeight="@dimen/dp20"
+                    android:text=""
+                    android:hint="@string/input_the_contact"
+                    android:textColorHint="@color/gray_light_text"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="@dimen/dp13" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/gray_light" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/the_contact_phone"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp14" />
+
+                <com.example.administrator.friendshape.ui.view.ClearEditTextView
+                    android:id="@+id/the_contact_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp100"
+                    android:layout_marginRight="@dimen/dp15"
+                    android:background="@color/transparent"
+                    android:minHeight="@dimen/dp20"
+                    android:text=""
+                    android:hint="@string/input_the_contact_phone"
+                    android:textColorHint="@color/gray_light_text"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="@dimen/dp13" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/gray_light" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp15"
+                android:background="@color/gray_" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/merchants_img"
+                    android:layout_width="@dimen/dp60"
+                    android:layout_height="@dimen/dp60"
+                    android:layout_margin="@dimen/dp15"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/merchants_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/merchants_img"
+                    android:text="商户名称"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp14" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/layout_team_statistical" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/pay_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_light" />
+
+        <TextView
+            android:id="@+id/pay_number"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:textSize="@dimen/dp14"
+            android:text="@string/pay_number_about"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            android:id="@+id/immediately_pay"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/blue_bar"
+            android:gravity="center"
+            android:text="@string/immediately_pay"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

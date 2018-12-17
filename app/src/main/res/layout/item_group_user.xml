@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_centerHorizontal="true"
+        android:id="@+id/layout_user"
+        android:layout_width="@dimen/dp50"
+        android:layout_height="@dimen/dp50">
+
+        <com.example.administrator.friendshape.ui.view.CircleImageView
+            android:id="@+id/user_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@drawable/placeholder" />
+
+        <View
+            android:id="@+id/check_select"
+            android:layout_width="@dimen/dp15"
+            android:layout_height="@dimen/dp15"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/select_icon"
+            android:gravity="center_vertical" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginBottom="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp5"
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_user"
+        android:layout_centerHorizontal="true"
+        android:text="用户名"
+        android:textColor="@color/gray_light_text"
+        android:textSize="@dimen/dp12" />
+
+</RelativeLayout>

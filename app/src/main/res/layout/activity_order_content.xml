@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp80">
+
+                <ImageView
+                    android:id="@+id/order_img_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/order_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp50"
+                    android:text="当前状态"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dp14" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp15">
+
+                <com.example.administrator.friendshape.ui.view.CircleImageView
+                    android:id="@+id/sponsor_img"
+                    android:layout_width="@dimen/dp60"
+                    android:layout_height="@dimen/dp60" />
+
+                <TextView
+                    android:id="@+id/sponsor_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_toRightOf="@+id/sponsor_img"
+                    android:lineSpacingExtra="@dimen/dp5"
+                    android:text="发起者信息"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/invite_friends"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@drawable/corners_the_gradient_bg"
+                    android:paddingBottom="@dimen/dp5"
+                    android:paddingLeft="@dimen/dp10"
+                    android:paddingRight="@dimen/dp10"
+                    android:paddingTop="@dimen/dp5"
+                    android:text="@string/invite_friends"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dp13"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/activity_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sponsor_img"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:lineSpacingExtra="@dimen/dp5"
+                    android:text="活动信息"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp10"
+                android:background="@color/gray_" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp10"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp15"
+                android:layout_marginTop="@dimen/dp15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp20"
+                    android:gravity="center_vertical"
+                    android:text="@string/members_of_the_group"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp14" />
+
+                <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+                    android:id="@+id/members_of_the_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp20"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/group_members_icon"
+                    android:drawablePadding="@dimen/dp5"
+                    android:gravity="center_vertical"
+                    android:text="10人"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="@dimen/dp13" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/group_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_below="@+id/members_of_the_group"
+                    android:layout_marginTop="@dimen/dp5" />
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_gap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp20"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/group_recycler_view">
+
+                    <TextView
+                        android:id="@+id/group_complete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/group_complete"
+                        android:textColor="@color/gray_light_text"
+                        android:textSize="@dimen/dp13" />
+
+
+                    <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+                        android:id="@+id/gap_boy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_marginRight="@dimen/dp5"
+                        android:layout_toLeftOf="@+id/group_complete"
+                        android:drawableLeft="@drawable/boy_icon"
+                        android:drawablePadding="@dimen/dp5"
+                        android:gravity="center_vertical"
+                        android:text="0人"
+                        android:textColor="@color/black_overlay"
+                        android:textSize="@dimen/dp13" />
+
+                    <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+                        android:id="@+id/gap_girl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_marginRight="@dimen/dp5"
+                        android:layout_toLeftOf="@+id/gap_boy"
+                        android:drawableLeft="@drawable/girl_icon"
+                        android:drawablePadding="@dimen/dp5"
+                        android:gravity="center_vertical"
+                        android:text="0人"
+                        android:textColor="@color/black_overlay"
+                        android:textSize="@dimen/dp13" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/dp5"
+                        android:layout_toLeftOf="@+id/gap_girl"
+                        android:gravity="center_vertical"
+                        android:text="@string/gap"
+                        android:textColor="@color/gray_light_text"
+                        android:textSize="@dimen/dp13" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp15"
+                android:background="@color/gray_light" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp10"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp15"
+                android:layout_marginTop="@dimen/dp10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp20"
+                    android:text="@string/group_funds"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp14" />
+
+                <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+                    android:id="@+id/group_funds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp20"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/group_funds_icon"
+                    android:drawablePadding="@dimen/dp5"
+                    android:gravity="center_vertical"
+                    android:text="2000元"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="@dimen/dp13" />
+
+                <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+                    android:id="@+id/no_single"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp20"
+                    android:layout_marginRight="@dimen/dp15"
+                    android:layout_toLeftOf="@+id/group_funds"
+                    android:drawableLeft="@drawable/girl_icon"
+                    android:drawablePadding="@dimen/dp5"
+                    android:gravity="center_vertical"
+                    android:text="@string/no_single"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="@dimen/dp13" />
+
+                <ProgressBar
+                    android:id="@+id/progress"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/group_funds"
+                    android:layout_marginLeft="@dimen/dp60"
+                    android:layout_marginRight="@dimen/dp60"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:max="100"
+                    android:progress="80"
+                    android:progressDrawable="@drawable/corners_bar_bg" />
+
+                <TextView
+                    android:id="@+id/difference"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp20"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/progress"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:text="还差0元成团"
+                    android:textColor="@color/gray_light_text"
+                    android:textSize="@dimen/dp13" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp10"
+                android:background="@color/gray_" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+                        android:id="@+id/in_group_chat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@drawable/group_chat_on_icon"
+                        android:drawablePadding="@dimen/dp10"
+                        android:text="@string/in_group_chat"
+                        android:textColor="@color/blue_bar"
+                        android:textSize="@dimen/dp13" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@color/gray_light" />
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+                        android:id="@+id/tuxedo_immediately"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@drawable/to_participate_in_on_icon"
+                        android:drawablePadding="@dimen/dp10"
+                        android:text="@string/tuxedo_immediately"
+                        android:textColor="@color/blue_bar"
+                        android:textSize="@dimen/dp13" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp10"
+                android:background="@color/gray_" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp15"
+                android:layout_marginTop="@dimen/dp15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp20"
+                    android:gravity="center_vertical"
+                    android:text="@string/activity_needs"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp14" />
+
+                <TextView
+                    android:id="@+id/activity_needs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp80"
+                    android:text="@string/activity_needs"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="@dimen/dp13" />
+
+                <View
+                    android:id="@+id/activity_needs_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/activity_needs"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:background="@color/gray_light" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp20"
+                    android:layout_below="@+id/activity_needs_line"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:gravity="center_vertical"
+                    android:text="@string/the_contact"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp14" />
+
+                <TextView
+                    android:id="@+id/the_contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp20"
+                    android:layout_below="@+id/activity_needs_line"
+                    android:layout_marginLeft="@dimen/dp80"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:gravity="center_vertical"
+                    android:text="@string/the_contact"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="@dimen/dp13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp20"
+                    android:layout_below="@+id/the_contact"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:gravity="center_vertical"
+                    android:text="@string/the_contact_phone"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="@dimen/dp14" />
+
+                <TextView
+                    android:id="@+id/the_contact_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp20"
+                    android:layout_below="@+id/the_contact"
+                    android:layout_marginLeft="@dimen/dp80"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:gravity="center_vertical"
+                    android:text="@string/the_contact_phone"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="@dimen/dp13" />
+
+                <View
+                    android:id="@+id/the_contact_phone_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/the_contact_phone"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@color/gray_light" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/the_contact_phone_line"
+                    android:minHeight="@dimen/dp60">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:gravity="center_vertical"
+                        android:text="@string/merchants_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dp14" />
+
+                    <TextView
+                        android:id="@+id/merchants_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_marginLeft="@dimen/dp80"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:gravity="center_vertical"
+                        android:text="商户店名"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dp13" />
+
+                    <View
+                        android:layout_width="@dimen/dp15"
+                        android:layout_height="@dimen/dp18"
+                        android:layout_below="@+id/merchants_content"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:layout_marginLeft="@dimen/dp80"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:background="@drawable/location_gray_icon" />
+
+                    <com.example.administrator.friendshape.ui.view.DrawableCenterTextView
+                        android:id="@+id/merchants_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/merchants_content"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:layout_marginLeft="@dimen/dp100"
+                        android:layout_marginRight="@dimen/dp40"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:gravity="center_vertical"
+                        android:text="商户地址"
+                        android:textColor="@color/black_overlay"
+                        android:textSize="@dimen/dp12" />
+
+                    <ImageView
+                        android:id="@+id/phone_img"
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp5"
+                        android:padding="@dimen/dp5"
+                        android:src="@drawable/phone_icon" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:layout_marginRight="@dimen/dp15"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_toLeftOf="@+id/phone_img"
+                        android:background="@color/gray_light" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp10"
+                    android:background="@color/gray_" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp15"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/the_order_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="订单编号 : 123456132"
+                        android:textColor="@color/black_overlay"
+                        android:textSize="@dimen/dp13" />
+
+                    <TextView
+                        android:id="@+id/a_group_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:text="发起组团时间:"
+                        android:textColor="@color/black_overlay"
+                        android:textSize="@dimen/dp13" />
+
+                    <TextView
+                        android:id="@+id/a_group_successful_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:text="组团成功时间"
+                        android:textColor="@color/black_overlay"
+                        android:textSize="@dimen/dp13" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/operation_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp10"
+                    android:background="@color/gray_" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp10">
+
+                    <TextView
+                        android:id="@+id/about_operation_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp15"
+                        android:background="@drawable/corners_solid_text_black_overlay"
+                        android:paddingBottom="@dimen/dp5"
+                        android:paddingLeft="@dimen/dp10"
+                        android:paddingRight="@dimen/dp10"
+                        android:paddingTop="@dimen/dp5"
+                        android:text="@string/cancle_order"
+                        android:textColor="@color/black_overlay"
+                        android:textSize="@dimen/dp13" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

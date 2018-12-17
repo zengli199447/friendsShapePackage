@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp80">
+
+    <com.example.administrator.friendshape.ui.view.CircleImageView
+        android:id="@+id/group_user_img"
+        android:layout_width="@dimen/dp40"
+        android:layout_height="@dimen/dp40"
+        android:layout_centerVertical="true"
+        android:src="@drawable/placeholder" />
+
+    <TextView
+        android:id="@+id/the_initiator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_toRightOf="@+id/group_user_img"
+        android:text="组团发起者"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dp14" />
+
+    <TextView
+        android:id="@+id/details"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp30"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/corners_soild_layout_blue"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15"
+        android:text="@string/details"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp14" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp15"
+        android:layout_toLeftOf="@+id/details"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/current_personnel_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="@dimen/dp8"
+            android:gravity="right"
+            android:text="当前人员状态"
+            android:textColor="@color/black_overlay"
+            android:textSize="@dimen/dp13" />
+
+        <TextView
+            android:id="@+id/time_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:text="当前人员状态"
+            android:textColor="@color/gray_light_text"
+            android:textSize="@dimen/dp12" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_light" />
+
+</RelativeLayout>
