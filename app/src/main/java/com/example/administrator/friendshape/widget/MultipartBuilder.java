@@ -1,8 +1,11 @@
 package com.example.administrator.friendshape.widget;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.BitmapFactory;
+import android.os.Handler;
+import android.os.Message;
 
 import com.example.administrator.friendshape.global.DataClass;
 import com.example.administrator.friendshape.global.MyApplication;
@@ -43,6 +46,7 @@ public class MultipartBuilder {
     private HashMap<String, String> textParams;
     private HashMap<String, File> fileparams;
     int flags;
+    private int size = 0;
     private List<String> stringList = new ArrayList<>();
 
     public MultipartBuilder(Context context, int flags) {
@@ -50,24 +54,27 @@ public class MultipartBuilder {
         this.flags = flags;
     }
 
-    public void arrangementUpLoad() {
-        LogUtil.e(TAG,"DataClass.AlbumFileList.size() : " + DataClass.AlbumFileList.size());
-        for (int i = 0; i < DataClass.AlbumFileList.size(); i++) {
-            commitFile(DataClass.AlbumFileList.get(i).getPath());
-            LogUtil.e(TAG,"DataClass.AlbumFileList.get(i).getPath() : " + DataClass.AlbumFileList.get(i).getPath());
+    @SuppressLint("HandlerLeak")
+    private Handler handler = new Handler() {
+        @Override
+        public void dispatchMessage(Message msg) {
+            super.dispatchMessage(msg);
+            size = size + 1;
+            if (size < DataClass.AlbumFileList.size()) {
+                commitFile(DataClass.AlbumFileList.get(size).getPath());
+            }
         }
+    };
+
+    public void arrangementUpLoad() {
+        commitFile(DataClass.AlbumFileList.get(size).getPath());
     }
 
     public void commitFile(final String file) {
-
         MyApplication.executorService.submit(new Runnable() {
             @Override
             public void run() {
-
                 try {
-//                    HashMap map = new HashMap<>();
-//                    map.put("action", DataClass.IMAGE_SAVE_SET);
-//                    URL url = new URL(new StringBuffer().append(DataClass.File_URL).append(new Gson().toJson(map)).toString());
                     URL url = new URL(DataClass.File_URL);
                     textParams = new HashMap<>();
                     fileparams = new HashMap<>();
@@ -122,6 +129,8 @@ public class MultipartBuilder {
                                 if (stringList.size() == DataClass.AlbumFileList.size()) {
                                     if (upLoadFileListener != null)
                                         upLoadFileListener.onUpLoadFileListener(LineFormatNetData());
+                                } else {
+                                    handler.sendEmptyMessage(0);
                                 }
                                 break;
                         }
@@ -138,6 +147,7 @@ public class MultipartBuilder {
                     e.printStackTrace();
                     LogUtil.e(TAG, "Exception : " + e.toString());
                 }
+
             }
         });
 

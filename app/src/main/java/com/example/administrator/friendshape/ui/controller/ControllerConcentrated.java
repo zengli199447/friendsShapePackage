@@ -203,7 +203,7 @@ public class ControllerConcentrated extends ControllerClassObserver implements I
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         linkedHashMap.put("action", DataClass.HOME_PAGE);
         linkedHashMap.put("userid", DataClass.USERID);
-        linkedHashMap.put("versionvalue", SystemUtil.packageCode(context));
+        linkedHashMap.put("versionvalue", SystemUtil.getAppVersionName(context, true));
         linkedHashMap.put("systemtype", 1);
         linkedHashMap.put("pagenum", page);
         linkedHashMap.put("longitude", DataClass.LONGITUDE);

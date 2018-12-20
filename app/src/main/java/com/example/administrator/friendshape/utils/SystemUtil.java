@@ -336,46 +336,6 @@ public class SystemUtil {
         return result4.setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString() + "TB";
     }
 
-    public static String getAppInfo(Context context) {
-        try {
-            String pkName = context.getPackageName();
-            String versionName = context.getPackageManager().getPackageInfo(pkName, 0).versionName;
-            int versionCode = context.getPackageManager().getPackageInfo(pkName, 0).versionCode;
-            return versionName;
-        } catch (Exception e) {
-        }
-        return "";
-    }
-
-    //时间初始化
-    public static String initDate(Calendar calendar) {
-        month = calendar.get(Calendar.MONTH) + 1;
-        year = calendar.get(Calendar.YEAR);
-        data = calendar.get(Calendar.DATE);
-        hour = calendar.get(Calendar.HOUR_OF_DAY);
-        minute = calendar.get(Calendar.MINUTE);
-        if (minute < 10) {
-            minuteString = timeFormat(minute);
-        } else {
-            minuteString = String.valueOf(minute);
-        }
-        currentTime = new StringBuffer().append(year).append("-").append(month).append("-").append(data).append(" ").append(hour).append(":").append(minuteString).toString();
-        int date = calendar.get(Calendar.DAY_OF_WEEK) - 1;
-        if (date < 0)
-            date = 0;
-        weekDay = weekDays[date];
-
-        return currentTime;
-    }
-
-    public static String timeFormat(int minute) {
-        String min = "";
-        if (minute < 10) {
-            min = new StringBuffer().append(0).append(minute).toString();
-        }
-        return min;
-    }
-
     public static void openKeybord(EditText mEditText, Context mContext) {
         InputMethodManager imm = (InputMethodManager) mContext
                 .getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -413,30 +373,6 @@ public class SystemUtil {
             }
         }
         return isWork;
-    }
-
-    public static String getCurrentTime(boolean status) {
-        SimpleDateFormat df = null;
-        df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        if (status)
-            df = new SimpleDateFormat("yyyy-MM-dd");
-        Date day = new Date();
-        return df.format(day);
-    }
-
-    public static String getCurrentTimeText(long date) {
-        SimpleDateFormat df = new SimpleDateFormat("yyyy.MM.dd HH:mm");
-        return df.format(new Date(date));
-    }
-
-    public static String getCurrentTimeHMSText(long date) {
-        SimpleDateFormat df = new SimpleDateFormat("HH:mm");
-        return df.format(new Date(date));
-    }
-
-    public static String getCurrentTimeMSText(long date) {
-        SimpleDateFormat df = new SimpleDateFormat("mm:ss");
-        return df.format(new Date(date));
     }
 
     public static byte[] readFileToByteArray(File file) {
@@ -479,15 +415,6 @@ public class SystemUtil {
     }
 
     //魔术字符串
-    public static void textMagicTool(Context context, TextView view, String firstText, String lastText, int dpFirst, int dpLast, int colorFirst, int colorLast) {
-        if (lastText != null && !lastText.isEmpty())
-            view.setText(SpannableBuilder.create(context)
-                    .append(firstText, dpFirst, colorFirst).
-                            append(new StringBuffer().append("\n").append(lastText).toString(),
-                                    dpLast, colorLast).build());
-    }
-
-    //魔术字符串
     public static void textMagicTool(Context context, TextView view, String firstText, String lastText, int dpFirst, int dpLast, int colorFirst, int colorLast, String enter) {
         if (lastText != null && !lastText.isEmpty())
             view.setText(SpannableBuilder.create(context)
@@ -527,8 +454,7 @@ public class SystemUtil {
             totalHeight += listItem.getMeasuredHeight(); // 统计所有子项的总高度
         }
         ViewGroup.LayoutParams params = listView.getLayoutParams();
-        params.height = totalHeight
-                + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
+        params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
         // listView.getDividerHeight()获取子项间分隔符占用的高度
         // params.height最后得到整个ListView完整显示需要的高度
         listView.setLayoutParams(params);
@@ -710,18 +636,6 @@ public class SystemUtil {
         return s;
     }
 
-    public static int packageCode(Context context) {
-        PackageManager manager = context.getPackageManager();
-        int code = 0;
-        try {
-            PackageInfo info = manager.getPackageInfo(context.getPackageName(), 0);
-            code = info.versionCode;
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
-        return code;
-    }
-
     //获取屏幕宽度
     public static void initWindowsManagerWidth(Activity activity) {
         WindowManager wm = (WindowManager) activity.getSystemService(Context.WINDOW_SERVICE);
@@ -769,21 +683,21 @@ public class SystemUtil {
     /**
      * 返回当前程序版本名
      */
-    public static String getAppVersionName(Context context) {
+    public static String getAppVersionName(Context context, boolean status) {
         String versionName = "";
-        int versioncode = 0;
+        String versioncode = "";
         try {
             PackageManager pm = context.getPackageManager();
             PackageInfo pi = pm.getPackageInfo(context.getPackageName(), 0);
             versionName = pi.versionName;
-            versioncode = pi.versionCode;
+            versioncode = String.valueOf(pi.versionCode);
             if (versionName == null || versionName.length() <= 0) {
                 return "";
             }
         } catch (Exception e) {
             LogUtil.e("Exception : VersionInfo", "e");
         }
-        return versionName;
+        return status ? versioncode : versionName;
     }
 
 }

@@ -136,7 +136,7 @@ public class GeneralActivity extends BaseActivity implements ShinyView.OnStarCha
             case 1:
                 title_name.setText(getText(R.string.about_me));
                 general_about_me.setVisibility(View.VISIBLE);
-                current_version.setText(new StringBuffer().append("v").append(SystemUtil.getAppVersionName(this)).toString());
+                current_version.setText(new StringBuffer().append("v").append(SystemUtil.getAppVersionName(this,false)).toString());
                 break;
             case 2:
                 title_name.setText(getText(R.string.service_phone));

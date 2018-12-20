@@ -56,6 +56,31 @@ public class CalendarBuilder {
         return minute;
     }
 
+    public static String getCurrentTime(boolean status) {
+        SimpleDateFormat df = null;
+        df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        if (status)
+            df = new SimpleDateFormat("yyyy-MM-dd");
+        Date day = new Date();
+        return df.format(day);
+    }
+
+    public static String formatHMSText(long date , int type) {
+        SimpleDateFormat df = null;
+        switch (type){
+            case 0:
+                df = new SimpleDateFormat("HH:mm");
+                break;
+            case 1:
+                df = new SimpleDateFormat("mm:ss");
+                break;
+            case 2:
+                df = new SimpleDateFormat("yyyy.MM.dd HH:mm");
+                break;
+        }
+        return df.format(new Date(date));
+    }
+
     public static long getFormatLongDate(String time) {
         long longTime = 0;
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");

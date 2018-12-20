@@ -22,7 +22,6 @@ public class DataClass {
     //TODO BaseUrl
     public static String URL = "http://mengyh.027perfect.com/api/";
 
-    //    public static String File_URL = URL + "api.mingfa.php?version=v1&vars=";
     public static String File_URL = URL + "api.mingfa.php?";
 
     public static final String BOUNDARY = "--my_boundary--";

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
-    xmlns:roundiv="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="120dp">
 
@@ -10,6 +9,7 @@
         android:layout_width="@dimen/dp120"
         android:layout_height="@dimen/dp90"
         android:layout_centerVertical="true"
+        android:background="@drawable/placeholder"
         android:scaleType="centerCrop" />
 
     <RelativeLayout

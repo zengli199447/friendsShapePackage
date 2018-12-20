@@ -33,6 +33,7 @@ import com.example.administrator.friendshape.ui.view.DrawableCenterTextView;
 import com.example.administrator.friendshape.utils.LogUtil;
 import com.example.administrator.friendshape.utils.SystemUtil;
 import com.example.administrator.friendshape.widget.AliChatBuilder;
+import com.example.administrator.friendshape.widget.CalendarBuilder;
 import com.example.administrator.friendshape.widget.ViewBuilder;
 
 import java.lang.ref.WeakReference;
@@ -190,7 +191,7 @@ public class ImAliChatConversationUi extends IMConversationListUI {
             headLoadHelper.setHeadView(holder.user_img, conversation);
 
             holder.content_message.setText(conversation.getLatestContent());
-            holder.creat_time.setText(SystemUtil.getCurrentTimeText(conversation.getLatestTime()));
+            holder.creat_time.setText(CalendarBuilder.formatHMSText(conversation.getLatestTime(),2));
 
             holder.creat_time.setText(IMUtil.getFormatTime(conversation.getLatestTimeInMillisecond(), DataClass.mIMKit.getIMCore().getServerTime()));
             String title = "";

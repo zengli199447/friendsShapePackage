@@ -81,6 +81,7 @@
             android:layout_height="@dimen/dp40">
 
             <TextView
+                android:visibility="gone"
                 android:id="@+id/creat_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

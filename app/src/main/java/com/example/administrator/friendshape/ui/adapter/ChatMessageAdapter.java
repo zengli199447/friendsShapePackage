@@ -59,7 +59,7 @@ public class ChatMessageAdapter extends RecyclerView.Adapter<MyViewHolder> {
         View line = holder.itemView.findViewById(R.id.line);
 
         content_message.setText(ywConversation.getLatestContent());
-        creat_time.setText(SystemUtil.getCurrentTimeText(ywConversation.getLatestTime()));
+        creat_time.setText(CalendarBuilder.formatHMSText(ywConversation.getLatestTime(),2));
 
         if (ywConversation.getUnreadCount() > 0) {
             message_count.setText(String.valueOf(ywConversation.getUnreadCount()));
