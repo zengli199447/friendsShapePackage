@@ -680,6 +680,16 @@ public class SystemUtil {
         return theReturnValue;
     }
 
+    public static String JudgeCount(int count) {
+        String countString;
+        if (count > 999) {
+            countString = new StringBuffer().append(" ").append(999).append("+").toString();
+        } else {
+            countString = new StringBuffer().append(" ").append(count).toString();
+        }
+        return countString;
+    }
+
     /**
      * 返回当前程序版本名
      */

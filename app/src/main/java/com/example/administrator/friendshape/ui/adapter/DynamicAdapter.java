@@ -128,14 +128,10 @@ public class DynamicAdapter extends RecyclerView.Adapter<MyViewHolder> implement
             List<String> imgarr = newsBean.getImgarr();
             List<DynamicNetBean.ResultBean.NewsBean.ReplyBean> reply = newsBean.getReply();
             ArrayList<PackingNetBeanPhoto> packingNetBeanPhotoArrayList = new ArrayList<>();
-            String commentsSize;
+
             Glide.with(context).load(SystemUtil.JudgeUrl(newsBean.getPhoto())).error(R.drawable.banner_off).into(user_img);
-            if (reply.size() > 1000) {
-                commentsSize = new StringBuffer().append(999).append("+").toString();
-            } else {
-                commentsSize = String.valueOf(reply.size());
-            }
-            comments.setText(commentsSize);
+
+            comments.setText(SystemUtil.JudgeCount(reply.size()));
 
             if (imgarr.size() > 0) {
                 for (String photo : imgarr) {
@@ -224,7 +220,7 @@ public class DynamicAdapter extends RecyclerView.Adapter<MyViewHolder> implement
         } else {
             spanCount = 3;
         }
-        recycler_view.setLayoutManager(ViewBuilder.getFullyGridLayoutManager(context,false,spanCount));
+        recycler_view.setLayoutManager(ViewBuilder.getFullyGridLayoutManager(context, false, spanCount));
         RecyclerChildAdapter recyclerChildAdapter = new RecyclerChildAdapter(context, imgList);
         recycler_view.setAdapter(recyclerChildAdapter);
         recyclerChildAdapter.notifyDataSetChanged();
