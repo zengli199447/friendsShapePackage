@@ -168,7 +168,7 @@ public class EnterTheTuxedoActivity extends BaseActivity implements CustomPayPop
     public void onTuxedoNetWorkListener(SubmitATuxedoNetBean submitATuxedoNetBean) {
         orderCode = submitATuxedoNetBean.getOrdercode();
         if ("1".equals(submitATuxedoNetBean.getNeedpay())) {
-            customPayPopupWindow.showAtLocation(findViewById(R.id.tuxedo), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 100);
+            customPayPopupWindow.showAtLocation(findViewById(R.id.tuxedo), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
             SystemUtil.windowToDark(this);
             LogUtil.e(TAG, "支付");
         } else {

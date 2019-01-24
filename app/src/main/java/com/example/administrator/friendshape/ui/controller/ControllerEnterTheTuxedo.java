@@ -8,11 +8,7 @@ import com.example.administrator.friendshape.base.ControllerClassObserver;
 import com.example.administrator.friendshape.global.DataClass;
 import com.example.administrator.friendshape.model.bean.SubmitATuxedoNetBean;
 import com.example.administrator.friendshape.model.event.CommonEvent;
-import com.example.administrator.friendshape.model.event.EventCode;
 import com.example.administrator.friendshape.rxtools.RxUtil;
-import com.example.administrator.friendshape.ui.view.CustomPayPopupWindow;
-import com.example.administrator.friendshape.utils.LogUtil;
-import com.example.administrator.friendshape.utils.SystemUtil;
 import com.example.administrator.friendshape.widget.CommonSubscriber;
 import com.google.gson.Gson;
 

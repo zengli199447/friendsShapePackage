@@ -173,7 +173,7 @@ public class ControllerAllTypeOrder extends ControllerClassObserver implements O
             if (orderBean.getState_group().equals(context.getString(R.string.cancelled))) {
                 toastUtil.showToast(context.getString(R.string.order_cancelled));
             } else {
-                customPayPopupWindow.showAtLocation(empty_layout, Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 100);
+                customPayPopupWindow.showAtLocation(empty_layout, Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
                 SystemUtil.windowToDark(context);
             }
         } else if (context.getString(R.string.for_a_refund).equals(content)) {

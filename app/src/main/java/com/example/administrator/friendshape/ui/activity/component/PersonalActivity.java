@@ -162,12 +162,12 @@ public class PersonalActivity extends BaseActivity implements CustomSingleChoice
                 break;
             case R.id.edit_gender:
                 customSingleChoicePopupWindow.selectType(1, edit_gender.getText().toString());
-                customSingleChoicePopupWindow.showAtLocation(findViewById(R.id.user_id), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 100);
+                customSingleChoicePopupWindow.showAtLocation(findViewById(R.id.user_id), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
                 SystemUtil.windowToDark(this);
                 break;
             case R.id.edit_age:
                 customTimeChoicePopupWindow.refreshTitle(getString(R.string.choose_birthday), 0);
-                customTimeChoicePopupWindow.showAtLocation(findViewById(R.id.user_id), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 100);
+                customTimeChoicePopupWindow.showAtLocation(findViewById(R.id.user_id), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
                 SystemUtil.windowToDark(this);
                 break;
         }

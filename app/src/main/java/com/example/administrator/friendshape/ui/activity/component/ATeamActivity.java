@@ -235,17 +235,17 @@ public class ATeamActivity extends BaseActivity implements CustomSingleChoicePop
                 break;
             case R.id.gril_groups:
                 customSingleChoicePopupWindow.selectType(3, new StringBuffer().append(girlNumber).append(getString(R.string.people)).toString());
-                customSingleChoicePopupWindow.showAtLocation(findViewById(R.id.immediately_pay), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 100);
+                customSingleChoicePopupWindow.showAtLocation(findViewById(R.id.immediately_pay), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
                 SystemUtil.windowToDark(this);
                 break;
             case R.id.boy_groups:
                 customSingleChoicePopupWindow.selectType(2, new StringBuffer().append(boyNumber).append(getString(R.string.people)).toString());
-                customSingleChoicePopupWindow.showAtLocation(findViewById(R.id.immediately_pay), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 100);
+                customSingleChoicePopupWindow.showAtLocation(findViewById(R.id.immediately_pay), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
                 SystemUtil.windowToDark(this);
                 break;
             case R.id.the_activity_time_select:
                 customTimeChoicePopupWindow.refreshTitle(getString(R.string.the_activity_start_date), 0);
-                customTimeChoicePopupWindow.showAtLocation(findViewById(R.id.immediately_pay), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 100);
+                customTimeChoicePopupWindow.showAtLocation(findViewById(R.id.immediately_pay), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
                 SystemUtil.windowToDark(this);
                 break;
             case R.id.as_of_the_date_select:
@@ -253,7 +253,7 @@ public class ATeamActivity extends BaseActivity implements CustomSingleChoicePop
                     toastUtil.showToast(getString(R.string.activity_time_is_empty));
                 } else {
                     customTimeChoicePopupWindow.refreshTitle(getString(R.string.select_as_of_the_date), 1);
-                    customTimeChoicePopupWindow.showAtLocation(findViewById(R.id.immediately_pay), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 100);
+                    customTimeChoicePopupWindow.showAtLocation(findViewById(R.id.immediately_pay), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
                     SystemUtil.windowToDark(this);
                 }
                 break;
@@ -377,7 +377,7 @@ public class ATeamActivity extends BaseActivity implements CustomSingleChoicePop
         this.orderCode = orderCode;
         if ("1".equals(needPayStatus)) {
             LogUtil.e(TAG, "支付");
-            customPayPopupWindow.showAtLocation(findViewById(R.id.immediately_pay), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 100);
+            customPayPopupWindow.showAtLocation(findViewById(R.id.immediately_pay), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
             SystemUtil.windowToDark(this);
         } else if ("0".equals(needPayStatus)) {
             instance.showHelpfulHintsDialog(this, getString(R.string.initiate_group_successful), EventCode.INITIATE_GROUP);

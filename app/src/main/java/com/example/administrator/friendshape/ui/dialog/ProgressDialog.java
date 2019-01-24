@@ -22,6 +22,7 @@ public class ProgressDialog extends AlertDialog {
     private ImageView imageView;
     private AnimationDrawable animationDrawable;
     private String content;
+    private TextView prompt;
 
 
     protected ProgressDialog(Context context, @StyleRes int themeResId) {
@@ -34,6 +35,8 @@ public class ProgressDialog extends AlertDialog {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dialog_progress);
         imageView = (ImageView) findViewById(R.id.iv_loading);
+        prompt = findViewById(R.id.prompt);
+
         try {
             imageView.setVisibility(View.VISIBLE);
             imageView.setImageResource(R.drawable.progress_white_animlist);
@@ -46,7 +49,8 @@ public class ProgressDialog extends AlertDialog {
     }
 
     public void ShowDiaLog(String content) {
-        show();
+        prompt.setVisibility(View.VISIBLE);
+        prompt.setText(content);
     }
 
 

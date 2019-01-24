@@ -27,8 +27,6 @@ import com.example.administrator.friendshape.model.event.CommonEvent;
 import com.example.administrator.friendshape.model.event.EventCode;
 import com.example.administrator.friendshape.ui.controller.ControllerOrderContent;
 import com.example.administrator.friendshape.ui.dialog.ShowDialog;
-import com.example.administrator.friendshape.ui.view.CustomPayPopupWindow;
-import com.example.administrator.friendshape.utils.LogUtil;
 import com.example.administrator.friendshape.utils.SystemUtil;
 import com.example.administrator.friendshape.widget.AliChatBuilder;
 import com.example.administrator.friendshape.widget.CalendarBuilder;
